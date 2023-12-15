@@ -1,0 +1,84 @@
+					 ( Class Component Lifecycle )
+
+
+
+1) Mounting Phase:
+
+
+* constructor(props): Initializes the component, sets up state, and binds methods.
+
+* render(): Renders the component's UI.
+
+* componentDidMount(): Invoked after the component is rendered to the DOM. Used for side effects like data fetching.
+
+
+2) Updating Phase:
+
+* static getDerivedStateFromProps(nextProps, nextState): Invoked before rendering when props or state change. Updates the state based on props.
+
+* shouldComponentUpdate(nextProps, nextState): Decides whether to re-render the component. Performance optimization.
+
+* render(): Renders the updated UI.
+
+* getSnapshotBeforeUpdate(prevProps, prevState): Captures information before the DOM updates.
+
+* componentDidUpdate(prevProps, prevState, snapshot): Invoked after the component updates. Used for side effects based on the previous props or state.
+
+
+
+3) Unmounting Phase:
+
+* componentWillUnmount(): Invoked just before the component is removed from the DOM. Cleanup operations are performed here.
+
+
+
+
+					( Functional Component with Hooks )
+
+
+
+1) Mounting Phase:
+
+* useState(initialState): Initializes state in functional components.
+
+* useEffect(() => {}, []): Combines componentDidMount and componentDidUpdate. The function inside useEffect is executed after the component is mounted and re-executed when specified dependencies change.
+
+
+
+2) Updating Phase:
+
+* useState(newState): Updates state in functional components.
+
+* useEffect(() => { return () => {} }, [dependencies]): Combines componentWillUnmount. The cleanup function is executed when the component unmounts or when the specified dependencies change.
+
+
+
+*****Functional Component with Hook Example :----------------
+
+
+import React, { useState } from 'react';
+
+function ColorChange() {
+  const [btnColor, setBtnColor] = useState('green'); 
+  
+  const ButtonClick = () => {
+    setBtnColxor('red');
+  };
+
+  return (
+    <div>
+      <button
+        style={{ color: btnColor }}
+        onClick={ButtonClick}
+        >
+        Himanshu
+      </button>
+      
+    </div>
+  );
+}
+
+export default ColorChange;
+
+
+
