@@ -7,7 +7,6 @@ const LazyReactLogo = lazy(()=>{return new Promise (resolve => {
   }, 2000);
 })});
 
-// const LazyReactLogo = lazy(()=>import('./Como'));
 
 const MyLazyComponent = () => (
   <div style={{textAlign:"center"}}>
