@@ -1,0 +1,107 @@
+================================================================================MODULE 13 React – Applying Redux==========================================================
+
+
+*) What is Redux?
+===>
+Redux is a predictable state container for JavaScript applications. It is often used with React to manage the state of an application in a predictable way. Redux follows a unidirectional data flow pattern, where the state of the entire application is stored in a single JavaScript object called the "store." Actions are dispatched to modify the state, and reducers are used to specify how the state should change in response to those actions. Redux helps in managing complex state logic and making state changes more traceable and debuggable.
+
+
+
+
+*) What is Redux Thunk used for?
+===>
+Redux Thunk is a middleware for Redux that allows you to write action creators that return functions instead of plain action objects. This is particularly useful for handling asynchronous logic, such as making API calls. When an action creator returns a function, Redux Thunk middleware intercepts that function and provides it with the dispatch and getState functions. This enables the action creator to perform asynchronous operations and dispatch additional actions based on the results.
+
+
+
+
+*) What is Pure Component? When to use Pure Component over Component?
+===>
+In React, a PureComponent is a class component that automatically implements the shouldComponentUpdate method with a shallow prop and state comparison. This means that a PureComponent will only re-render if its props or state have changed. This optimization can help improve performance by preventing unnecessary renders when the component's output would be the same.
+
+You should use a PureComponent over a regular Component when you want to optimize performance by avoiding unnecessary re-renders. However, it's important to note that the shallow comparison may not be suitable for complex data structures or nested objects, and in such cases, you might need to implement your own shouldComponentUpdate method.
+
+
+
+
+*) What is the second answer to these questions?
+===>
+It seems like there might be a typo or a formatting issue in your question. If you have a specific request or need clarification on any particular aspect, please provide more details, and I'll do my best to assist you.
+
+
+
+
+
+
+*Create a Table and Search data from table using React Js?
+
+
+// App.js
+import React from 'react';
+import Serch from './Serch';
+
+function App() {
+  return (
+    <div className="App">
+      <h1>React Table with Search</h1>
+      <Serch />
+    </div>
+  );
+}
+
+export default App;
+
+
+
+
+// Serch.js
+import React, { useState } from 'react';
+
+const Serch = () => {
+  const [data, setData] = useState([
+    { id: 1, name: 'himanshu', age: 25 },
+    { id: 2, name: 'kano', age: 30 },
+    { id: 3, name: 'bunty', age: 20 },
+  ]);
+
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const filteredData = data.filter((item) =>
+    item.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  return (
+    <div>
+      <input
+        type="text"
+        placeholder="Search by name"
+        value={searchTerm}
+        onChange={handleSearch}
+      />
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          {filteredData.map((item) => (
+            <tr key={item.id}>
+              <td>{item.id}</td>
+              <td>{item.name}</td>
+              <td>{item.age}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+export default Serch;
