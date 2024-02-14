@@ -1,0 +1,384 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body
+{
+    overflow-x: hidden;
+}
+.header
+{
+    background:#003b95;
+    height: 500px;
+    /* background:url(https://r-xx.bstatic.com/xdata/images/xphoto/2880x868/279346280.jpeg?k=1f5ef835475595e138026356cdf0664eafb17cc2fc5aa9d09d90407d7ca866a1&o) ; */
+    /* box-shadow: inset 70px 0 150px black , inset -70px 0 150px black; */
+    background-size: 100% 100%;
+    width: 100%;
+}
+
+.header-parts
+{
+    width: 80%;
+    margin: 0 auto;
+}
+.header-part1
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    padding: 10px 0;
+
+}
+.booking
+{
+    font-weight: 900;
+    font-size: 28px;
+    color: white;
+}
+.state
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 3fr 1.5fr 1.5fr ;
+    font-weight: 700;
+}
+.state *
+{
+    color: white;
+    text-align: center;
+}
+
+.logo img
+{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+.round
+{
+    margin:  5px;
+    font-size: 30px
+
+
+}
+.property
+{
+padding: 10px 0;
+}
+.inr
+{
+    padding-top: 10px;
+}
+.btn1
+{
+    margin: 0 5px;
+
+}
+.btn
+{
+    background: white;
+    color: rgb(12, 181, 242);
+    padding: 10px 5px;
+    border-radius: 5px;
+    font-weight: 600;
+    border: 2px solid rgb(12, 181, 242);
+}
+
+.header-logo 
+{
+    display: none;
+    border-radius: 50%; 
+    border: 2px solid wheat;
+    font-size: 30px
+}
+.header-logo1
+{
+    margin: 0 5px 0 5px;
+} 
+
+.header-part2
+{
+    display: grid;
+    grid-template-columns: repeat(6,1.7fr) 5fr;
+    /* background: rgb(43, 43, 177); */
+
+}
+.header-part2 *
+{
+    margin: 10px 5px;
+    color: white;
+    padding: 2px 0;
+ 
+}
+.logo-travelling
+{
+    transition: 0.5s;
+    border-radius: 50px;
+    background:rgb(236, 229, 229 ,0);
+
+}
+.logo-travelling3
+{
+    display: none;
+}
+.logo-travelling1
+{
+    background:rgba(28, 177, 232, 0.3);
+    border: 1px solid white;
+    border-radius: 50px;
+}
+
+
+.logo-travelling:hover
+{
+    background:rgba(28, 177, 232, 0.3) ;
+}
+.blank
+{
+    display: none;
+}
+.logo-travelling-main
+{
+    position: relative;
+}
+
+
+h1
+{
+    font-size: 55px;
+    color: white;
+    padding-top: 200px;
+}
+p
+{
+    color: white;
+    font-size: 22px;
+}
+.inputs
+{
+    display: grid;
+    grid-template-columns: repeat(3,3fr) 1fr;
+    margin-top: 50px;
+}
+.serch-btn
+{
+ border: 3px solid goldenrod;
+ font-size: 20px;
+ color: white;
+ height: 50px;
+}
+.inputs select ,.inputs option
+{
+    width: 100%;
+    height: 50px;   
+   border: 3px solid goldenrod;
+
+}
+
+
+input
+{
+    width: 100%;
+    height: 50px;
+   border: 3px solid goldenrod;
+   color: black;
+   padding-left: 10px;
+}
+input:focus , select:focus
+{
+ outline: none;
+}
+
+.map-section
+{
+    display: grid;
+    grid-template-columns: 1fr 4fr ;
+    width: 80%;
+    column-gap: 5px;
+    margin: 50px auto auto auto;
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+
+}
+
+.map iframe
+{
+    height: 100%;
+    width: 100%;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+.section
+{
+    display: grid;
+    grid-template-columns: 2fr 3fr 1.1fr;
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.sec-content
+{
+    color: rgb(11, 120, 245);
+    padding: 0 10px;
+}
+.imgg
+{
+    height: 250px;
+    width: 100%;
+    border-radius: 5px
+}
+.txt
+{
+    color: rgb(11, 120, 245);
+}
+.part-of-section
+{
+    border-left: 2px solid gray;
+    margin:15px 0 0 10px;
+    padding: 5px 8px;
+}
+.show-map
+{
+    padding-left: 15px;
+}
+.part-of-section p
+{
+    font-size: 15px;
+    color: black;
+}
+.featured-btn
+{
+    display: block;
+    padding:2px 5px  ;
+    margin: 5px 0;
+}
+.Litimed-btn
+{
+    background: green;
+    color: white;
+    display: block;
+    margin-top: 18px;
+    padding: 5px;
+}
+.part-of-section h5
+{
+    padding-top: 5px;
+}
+
+.pay-property
+{
+    display: inline;
+}
+/* .hotel-name
+{
+    color: blue;
+} */
+.Litimed-btn2
+{
+    color: black;
+    background: goldenrod;
+}
+.Litimed-btn3
+{
+    background: #003b95;
+}
+.section-in-part
+{
+    margin-top: 19px;
+}
+.prices p
+{
+    color: red;
+    font-size: 15px;
+}
+.location
+{
+   
+    color: #003b95;
+}
+
+
+
+@media (max-width:1300px)
+{
+.header-parts,.map-section
+{
+    width: 98%;
+}
+}
+@media (max-width:1200px)
+{
+
+.header-logo 
+{
+    display: block;
+}
+.inr,.logo,.property,.round,.btn
+{
+    display: none;
+}
+.header-part1
+{
+    grid-template-columns: 9fr 0.5fr;
+}
+.header-logo1
+{
+    margin-left: 15px;
+} 
+.header-part2
+{
+    grid-template-columns: repeat(6,1fr) ;
+
+}
+}
+
+@media (max-width:900px)
+{
+
+.logo-travelling2
+{
+    display: none;
+}
+.header-part2
+{
+    grid-template-columns: repeat(4,1fr) ;
+}
+.logo-travelling3
+{
+    display: block;
+    position: relative;
+}
+.buttons
+{
+    width: 110%;
+    position: absolute;
+    top: 100%;
+    left: -10%;
+    background: black;
+    border-radius: 20px;
+}
+h1
+{
+    padding-top: 180px;
+}
+.inputs
+{
+    grid-template-columns: 1fr;
+    margin-top: 10px;
+}
+.map-section
+{
+    width: 98%;
+    margin-top: 180px;
+    grid-template-columns: 1fr;
+}
+.section
+{
+    margin-top: 10px
+}
+}
